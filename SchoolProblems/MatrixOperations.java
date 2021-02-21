@@ -5,7 +5,9 @@ public class MatrixOperations {
         int[][]matrix1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 		int[][]matrix2 =  {{2, 3, 5}, {7, 11, 13}, {17, 19, 23}};
 
-		PrintArray.print(productMatrix(matrix1, matrix2));    
+		PrintArray.print(matrix1);
+		PrintArray.print(matrix2);
+		PrintArray.print(productMatrix(matrix1, matrix2));
 	}
 
 public static int[][] productMatrix(int[][]matrixA, int[][]matrixB)
