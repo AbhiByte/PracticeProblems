@@ -9,10 +9,10 @@ public class MatrixOperations {
 		PrintArray.print(matrix2);
 		PrintArray.print(productMatrix(matrix1, matrix2));
 	}
-
+//Method to calculate product of two matrices
 public static int[][] productMatrix(int[][]matrixA, int[][]matrixB)
 	{
-
+	//Gets length of row/col for matrix1/2
 	int row1 = matrixA.length;
 
 	int col1= matrixA[0].length;
@@ -20,9 +20,11 @@ public static int[][] productMatrix(int[][]matrixA, int[][]matrixB)
 	int row2 = matrixB.length;
 
 	int col2 = matrixB[0].length;
-
+	
+	//Output matrix 
 	int[][] finalProduct = new int [row1][col2];
 
+	//Compatibility test
 	if (row2 != col1)
 	{
 		System.out.println("Matrices not compatible");
