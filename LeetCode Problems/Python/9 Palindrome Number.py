@@ -5,3 +5,7 @@ def isPalindrome(x):
         return True
     else:
         return False
+
+
+num = 123
+print(isPalindrome(num))
