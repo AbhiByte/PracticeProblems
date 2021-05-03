@@ -18,5 +18,4 @@ def reverseInt(x):
     if x > 2**31 - 1 or x < -1 * (2**31):
         x = 0
     return x
-num = 12345
-print(reverseInt(num))
+
