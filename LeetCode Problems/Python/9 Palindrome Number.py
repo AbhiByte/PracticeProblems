@@ -7,5 +7,3 @@ def isPalindrome(x):
         return False
 
 
-num = 123
-print(isPalindrome(num))
