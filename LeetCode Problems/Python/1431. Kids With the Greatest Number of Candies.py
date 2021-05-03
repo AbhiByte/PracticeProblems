@@ -12,6 +12,4 @@ def kidsWithCandies(candies, extraCandies):
             boolCandy[i] = False
     return boolCandy
 
-list = [12,1,12]
-num = 10
-print(kidsWithCandies(list, num))
+
