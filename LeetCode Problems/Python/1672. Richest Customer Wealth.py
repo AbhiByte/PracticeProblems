@@ -11,7 +11,3 @@ def maximumWealth(accounts):
     return ans
 account = [[2,8,7],[7,1,3],[1,9,5]]
 print(maximumWealth(account))
-
-def max(accounts):
-    return max(sum(i) for i in accounts)
-print(max(account))
