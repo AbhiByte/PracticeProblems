@@ -20,4 +20,4 @@ def running(arr):
 
 
 
-print(running(list))
+
