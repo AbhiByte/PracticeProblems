@@ -1,4 +1,4 @@
-
+#Not finished yet. Will complete later. Going for o(n) complexity
 def countPoints(points, queries):
     radii = []
     ans = []
