@@ -1,3 +1,4 @@
+//Not fully done. Logic is correct but some bug :(
 import java.lang.Math;
 public class Queries
 {
