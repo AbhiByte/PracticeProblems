@@ -1,4 +1,4 @@
-#Not finished yet. Will complete later. Going for o(n) complexity
+## Going for o(n) complexity
 import math
 def countPoints(points, queries):
     ans = []
