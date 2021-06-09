@@ -1,19 +1,19 @@
 #Not finished yet. Will complete later. Going for o(n) complexity
+import math
 def countPoints(points, queries):
-    radii = []
     ans = []
-    sum = 0
+    ansIndexCounter = 0
     for i in range(len(queries)):
-        for j in range(len(queries[i])):
-            if j == 0 and j+1 == 1:
+        totalPointsInCircle = 0
+        radius = queries[i][2]
 
-    for x in range(len(points)):
-        for y in range(len(points[x])):
-            if y == 0 and y+1 == 1:
+        for x in range(len(points)):
+            distance = math.sqrt((points[x][0] - queries[i][0])*(points[x][0] - queries[i][0]) + (points[x][1] - queries[i][1])*(points[x][1] - queries[i][1]))
+            if distance <= radius:
+                totalPointsInCircle += 1
 
-
-            if j == 2:
-                radii.append(queries[i][j])
+        ans.append(totalPointsInCircle)
+    return ans
 
 
 
