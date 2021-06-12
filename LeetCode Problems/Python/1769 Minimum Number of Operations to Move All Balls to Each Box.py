@@ -1,9 +1,12 @@
 def minOperations(boxes):
-        """
-        :type boxes: str
-        :rtype: List[int]
-        """
+        ans = map(int, boxes)
+        print(list(ans)[0])
+
+
 boxes = "110"
+minOperations(boxes)
+
+
 
 """
 expected ans: [1, 1, 2]
