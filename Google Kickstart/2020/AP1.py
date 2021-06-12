@@ -8,7 +8,7 @@ for x in range(len(num_cases)):
     N, B = [int(x) for x in input().split()]
     N_list = input().split()
     temp_ans = 0
-    #
+    
     for i in range(len(N_list)):
         for j in range(len(N_list)+1):
             if i+j < B:
