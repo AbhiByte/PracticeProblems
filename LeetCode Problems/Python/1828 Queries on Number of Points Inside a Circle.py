@@ -1,4 +1,4 @@
-## Going for o(n) complexity
+## Not optimal solution. Going for o(n) complexity
 import math
 def countPoints(points, queries):
     ans = []
