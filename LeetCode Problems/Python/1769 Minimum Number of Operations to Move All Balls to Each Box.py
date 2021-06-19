@@ -1,20 +1,21 @@
 def minOperations(boxes):
+
     ans = []
-    #Right side, Left side
     for x in range(len(boxes)):
-        right_count, left_count = 0, 0
-        for y in range(len(boxes) + 1):
-            if boxes[x] == '1':
-                right_count += (y-x)
-
-        for y in range(x-1):
-            if y > -1 and y != x:
-                left_count += (x-y)
-
-
-        ans.append(right_count+left_count)
+        #Left side
+        left_counter = 0
+        for l in range(len(boxes)):
+            if l < x:
+                if boxes[l] == '1':
+                    left_counter += (x - l)
+        #Right side
+        right_count = 0
+        for r in range(len(boxes)):
+            if r > x:
+                if boxes[r] == '1':
+                    right_count += (r - x)
+        ans.append((left_counter+right_count))
     return ans
-
 
 
 boxes = "110"
