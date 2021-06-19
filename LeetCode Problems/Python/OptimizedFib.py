@@ -1,4 +1,4 @@
-#Fibonaci recursive algo O(n)time and space using memoization
+#Fibonaci recursive algo O(n) time and space using memoization
 def fib(n, memo = {}):
     if n in memo:
         return memo[n]
