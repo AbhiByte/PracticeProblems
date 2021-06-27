@@ -12,7 +12,7 @@ def two_product_opt(nums, target):
         for x in nums:
             if x not in count:
                 count.append(x)
-            elif target/x in count:
+            if target/x in count:
                 return int(target/x), x
-#print(two_product_brute([1, 2, 6, 5, 3, 4], 20))
+print(two_product_brute([1, 2, 6, 5, 3, 4], 20))
 print(two_product_opt([1, 2, 6, 5, 3, 4], 20))
