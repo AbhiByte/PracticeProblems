@@ -1,11 +1,14 @@
 
-def climb(n, count = 0):
-    if n > 1:
-        return count
-    else:
-        return climb(n-1, count + 1)
+def climb(n, count = {}):
+    if n in count:
+        return count[n]
+    if n <= 1:
+        return 1
+    count[n] = climb(n-1, count) + climb(n-2, count)
+    return count[n]
 
 
 
 
-print(climb(5))
+
+print(climb(2))
