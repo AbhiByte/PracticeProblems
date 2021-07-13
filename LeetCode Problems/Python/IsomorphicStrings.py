@@ -1,23 +1,25 @@
 import itertools
 
 def isIsomorphic(s, t):
-    letters = {}
-    for (x,y) in zip(s,t):
-        if x not in letters.keys():
-            for key, value in letters.items():
-                if key == x and value == y:
-                    letters.setdefault(x,y)
-    print(letters)
-    rev_multidict = {}
-    for key, value in letters.items():
-        rev_multidict.setdefault(value, set()).add(key)
-    x = [key for key, values in rev_multidict.items() if len(values) > 1]
-    print(x)
-    if x == []:
-        return True
-    else:
+    if len(s) != len(t):
         return False
+    pairs = {}
+    used = {}
+
+    for i in range(len(s)):
+        char1 = s[i]
+        char2 = t[i]
+        if char1 in pairs.keys():
+            if pairs[char1] != char2:
+                return False
+        else:
+            if used[char2] == True:
+                return False
+            else:
+                pairs[char1] = char2
+                used[char2] = True
 
 
 
-print(isIsomorphic('foo', 'bar'))
+
+print(isIsomorphic('egg', 'add'))
