@@ -1,27 +1,28 @@
 inputs = []
 condition = True
 while condition:
-    n = int(input())
-    if n != 99999:
-        inputs.append(str(n))
-    else:
-        inputs.append(str(n))
+    n = str(input())
+    if int(n) != 99999:
+        inputs.append(n)
+    elif int(n) == 99999:
+        inputs.append(n)
         condition = False
-print(f"these are the inputs: {inputs}")
+
 directions = []
 steps = []
 for nums in inputs:
-    if nums != 99999:
-        sum = str(nums)[0] + str(nums)[1]
-        if int(sum) % 2 != 0:
+    if nums != '99999':
+        sum = int(nums[0]) + int(nums[1])
+
+        if sum % 2 != 0:
             directions.append("left")
-        elif int(sum) % 2 == 0 and int(sum) != 0:
+        elif sum % 2 == 0 and sum != 0:
             directions.append("right")
         else:
-            directions.append(directions.pop())
-        str_step = str(nums)
-        steps.append(int(str_step))
-print(f'the steps are {steps}')
+            directions.append(directions[-1])
+
+        int_steps = int(nums[2] + nums[3] + nums[4])
+        steps.append(int_steps)
 
 for x, y in zip(directions, steps):
     print(x, y)
