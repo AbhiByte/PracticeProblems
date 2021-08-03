@@ -1,11 +1,14 @@
 n = int(input())
 inputs = []
 for x in range(n):
-    a, b, c = int(input()).split()
+    a, b, c = input().split()
     inputs.append([a, b, c])
-total = 0
+count = 0
 for nums in inputs:
-    if sum(nums) == 2 or sum(nums) == 3:
-        total+=1
+    total = 0
+    for x in nums:
+        total += int(x)
+    if total == 2 or total == 3:
+        count += 1
 
-print(total)
+print(count)
