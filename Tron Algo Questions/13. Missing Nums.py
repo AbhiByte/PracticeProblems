@@ -1,3 +1,4 @@
+#Q11 O(n) time where n is max value
 def missing(arr):
     MAX = max(arr)
     count = min(arr)
