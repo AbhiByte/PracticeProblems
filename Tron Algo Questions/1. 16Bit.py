@@ -10,3 +10,17 @@ def high_bits(num):
     return "Odd"
 
 print(high_bits(10101000101))
+
+
+#New solution
+list_of_nums = []
+def sixteenbit (x):
+  nums = [int(i) for i in str(x)]
+
+  counter = {}
+  for x in nums:
+    counter.setdefault(x, 0)
+    counter[x] += 1
+  if counter[1] % 2 != 0: return 'Odd'
+  return 'Even'
+print(sixteenbit(101010111))
