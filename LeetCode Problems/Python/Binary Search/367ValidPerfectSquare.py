@@ -1,3 +1,8 @@
+'''
+Runtime: 20 ms, faster than 78.19% of Python online submissions for Valid Perfect Square.
+Memory Usage: 13.4 MB, less than 61.47% of Python online submissions for Valid Perfect Square.
+'''
+
 class Solution(object):
     def isPerfectSquare(self, num):
         l, r = 0, num
