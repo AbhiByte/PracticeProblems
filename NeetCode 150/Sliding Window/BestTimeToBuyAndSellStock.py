@@ -1,13 +1,14 @@
-#Old Solution
-left = 0 #Buy
-        right = 1 #Sell
-        max_profit = 0
-        while right < len(prices):
-            currentProfit = prices[right] - prices[left] #our current Profit
-            if prices[left] < prices[right]:
-                max_profit = max(currentProfit,max_profit)
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        
+        l, r = 0, 1 #Initial window
+        maxProfit = 0
+        
+        while r < len(prices):
+            curr = prices[r] - prices[l] #Current price
+            if prices[l] < prices[r]:    #If the transanction is +ve
+                maxProfit = max(curr, maxProfit) #Take the max of the curr and prev
             else:
-                left = right
-            right += 1
-        return max_profit
-#New Solution
+                l = r                    #Otherwise, move left window to right
+            r += 1                       #And increment right window by 1
+        return maxProfit
