@@ -13,3 +13,17 @@ class Solution:
         for x in out:
             x.pop(0)
         return out
+    
+    
+'''* Much better cleaner solution. Runtime 85ms Beats 99.54%, Memory 17.1MB Beats 86.23% *'''
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        result = {}
+        #count number of occurances of each letter in each string
+        for s in strs:
+            sorted_s = "".join(sorted(s))
+            if sorted_s not in result.keys():
+                result.setdefault(sorted_s, [s])
+            else:
+                result[sorted_s] += [s]
+        return [x for x in result.values()]
