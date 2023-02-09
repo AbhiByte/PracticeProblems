@@ -9,7 +9,9 @@ class MinStack:
         
 
     def pop(self) -> None:
-        self.stack.pop()
+        #self.stack.pop()
+        '''Or we can use del'''
+        del(self.stack[len(self.stack)-1])
 
     def top(self) -> int:
         return self.stack[-1]
