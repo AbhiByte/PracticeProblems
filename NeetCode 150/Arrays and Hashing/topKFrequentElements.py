@@ -19,3 +19,16 @@ class Solution:
                     tracker+=1
         return output
         
+#Way more efficient O(3n) = O(n) solution
+def func(nums, k):
+    count = [[] for i in range(len(nums) + 1)]
+        hashMap = {} #key, val = num, freq
+
+        for num in nums:
+            hashMap.setdefault(num, 0)
+            hashMap[num] += 1
+
+        for num, freq in hashMap.items():
+            count[freq].append(num)
+
+        return [item for sublist in count for item in sublist if item != None][-k:]
