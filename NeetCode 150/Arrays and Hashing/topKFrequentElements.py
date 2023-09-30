@@ -32,3 +32,20 @@ def func(nums, k):
             count[freq].append(num)
 
         return [item for sublist in count for item in sublist if item != None][-k:]
+
+#My solution Fall 2023
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+
+        count = {}
+        res = []
+        for num in nums: #O(n)
+            count.setdefault(num, 0)
+            count[num] += 1
+
+        for _ in range(k): #O(k)
+            max_val = max(count, key=count.get) #this might be O(n) haha
+            res.append(max_val)
+            count.pop(max_val)
+
+        return res #O(n) + O(k) + O(n) == O(n)
