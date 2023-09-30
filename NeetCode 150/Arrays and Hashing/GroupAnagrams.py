@@ -27,3 +27,19 @@ class Solution:
             else:
                 result[sorted_s] += [s]
         return [x for x in result.values()]
+
+
+'''Neetcode solution O(m * n)'''
+class Solution(object):
+    def groupAnagrams(self, strs):
+        res = defaultdict(list)
+
+        for s in strs:
+            count = [0] * 26
+            
+            for c in s:
+                count[ord(c) - ord('a')] += 1 #essentially count occurance of each letter
+            
+            res[tuple(count)].append(s) #then for that specific occurance list, add the string associated with it
+
+        return res.values()
