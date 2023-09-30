@@ -49,3 +49,24 @@ class Solution:
             count.pop(max_val)
 
         return res #O(n) + O(k) + O(n) == O(n)
+
+#Neetcode solution (I think mine is better)
+lass Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+
+        count = {}
+        res = [[] for i in range(len(nums) + 1)]
+
+        for num in nums:
+            count[num] = 1 + count.get(num, 0)
+
+        for n, c in count.items():
+            res[c].append(n)
+
+        output = []
+        for i in range(len(res) - 1, 0, -1):
+            for n in res[i]:
+                output.append(n)
+                if len(output) == k:
+                    return output
+
