@@ -12,7 +12,7 @@ class Solution:
 
 
 # Fall 2023 solution
-# Time complexity O(n), space complexity constant
+# Time complexity O(n), space complexsity constant
 class Solution:
     def twoSum(self, numbers: list[int], target: int) -> list[int]:
         l, r = 0, len(numbers) - 1
