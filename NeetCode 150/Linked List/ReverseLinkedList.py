@@ -13,3 +13,17 @@ class Solution:
             prev = curr
             curr = next_node
         return prev
+
+
+# Fall 2023 solution
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        curr = head
+        next_node = None
+        prev = None
+        while curr is not None:
+            next_node = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next_node
+        return prev
