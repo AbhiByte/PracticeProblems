@@ -32,3 +32,22 @@ class Solution:
             else:
                 l += 1
         return maxArea
+    
+    
+# Summer 2024 solution (this was fairly easy this time)
+class Solution:
+    def maxArea(self, heights: list[int]) -> int:
+
+        l, r = 0, len(heights) - 1
+        max_area = 0
+        while l < r:
+            area = min(heights[l], heights[r]) * (r - l)
+
+            max_area = max(area, max_area)
+
+            if heights[r] <= heights[l]:
+                r -= 1
+            else:
+                l += 1
+        
+        return max_area
